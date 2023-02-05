@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    text-align: center;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background-color: lightblue;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav a {
+    padding: 1em;
+    text-decoration: none;
+  }
+  
+  main {
+    padding: 1em;
+  }
+  
+  section h2 {
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    padding: 2em;
+  }
+  
+  form div {
+    margin: 1em 0;
+    width: 100%;
+    text-align: left;
+  }
+  
+  form label,
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 0.5em;
+    font-size: 1em;
+  }
+
+  select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  form button[type="submit"] {
+    background-color: blue;
+    color: white;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-top: 1em;
+    cursor: pointer;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1em;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  tr.even {
+    background-color: #f2f2f2;
+  }
+  
+  .home-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: lightblue;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+  }

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Professional Dog Grooming</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Professional Dog Grooming</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#form">Request Appointment</a></li>
+        <li><a href="/admin">Admin</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section id="services">
+        <h2>Services</h2>
+        <ul>
+          <li>
+            <h3>Bath and Brush</h3>
+            <p>A relaxing bath followed by a thorough brushing to leave your dog looking and feeling their best.</p>
+          </li>
+          <li>
+            <h3>Full Groom</h3>
+            <p>Includes all of the services in the Bath and Brush package, plus a haircut and styling of your choice.</p>
+          </li>
+          <li>
+            <h3>Nail Trimming</h3>
+            <p>A quick and painless way to keep your dog's nails neatly trimmed and in good health.</p>
+          </li>
+        </ul>
+      </section>
+      <section id="form">
+        <h2>Request Appointment</h2>
+        <form action="/servicerequest" method="post">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date">
+          </div>
+          <div class="form-group">
+            <label for="time">Time</label>
+            <input type="time" name="time" id="time" min="08:00" max="17:00" required>
+          </div>
+          <div class="form-group">
+            <label for="service">Service</label>
+            <select id="service" name="service" required>
+              <option value="">Select Service</option>
+              <option value="Grooming">Grooming</option>
+              <option value="Bathing">Bathing</option>
+              <option value="Nail Trimming">Nail Trimming</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="notes">Notes</label>
+            <textarea id="notes" name="notes"></textarea>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; Professional Dog Grooming 2023</p>
+    </footer>
+  </body>
+  <script>
+    const datePicker = document.querySelector('#date');
+    datePicker.min = new Date().toISOString().split("T")[0];
+    datePicker.addEventListener('change', function() {
+      if (new Date(datePicker.value) < new Date()) {
+        alert('Please select a date that is equal to or after today.');
+        datePicker.value = '';
+      }
+    });
+  </script>
+</html>

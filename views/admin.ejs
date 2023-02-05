@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Page</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Form Data</h1>
+  <h1>Service Requests</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Service</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for (var i = 0; i < serviceRequests.length; i++) { %>
+        <% var rowClass = (i % 2 === 0) ? 'even' : 'odd'; %>
+        <tr class="<%= rowClass %>">
+          <td><%= serviceRequests[i].name %></td>
+          <td><%= serviceRequests[i].phone %></td>
+          <td><%= serviceRequests[i].email %></td>
+          <td><%= serviceRequests[i].date %></td>
+          <td><%= serviceRequests[i].time %></td>
+          <td><%= serviceRequests[i].service %></td>
+          <td><%= serviceRequests[i].notes %></td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+  
+  <a href="/" class="home-button">Home</a>
+</body>
+</html>
